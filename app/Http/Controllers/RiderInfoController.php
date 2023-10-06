@@ -20,13 +20,12 @@ class RiderInfoController extends Controller
             ]);
 
             if ($validator->fails()) {
-                return response()->json(['errors' => $validator->errors()->first()], 422);
+                return response()->json(['errors' => $validator->errors()->first(), 'data' => null, 'statusCode' => 422], 422);
             }
-
             $riderInfo = RiderInfo::create($request->all());
             return response()->json(['message' => 'Rider info inserted successfully', 'data' => $riderInfo], 201);
         } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
+            return response()->json(['error' => $e->getMessage(), 'data' => null, 'statusCode' => 500], 500);
         }
     }
 
