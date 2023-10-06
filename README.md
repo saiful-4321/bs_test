@@ -19,3 +19,31 @@ Sample body data(raw/json)
     "long": "90.370326672366"
 }
 ```
+Sample Response 
+```
+{
+    "message": "Rider info inserted successfully",
+    "data": {
+        "rider_id": 2,
+        "lat": "23.812005737520797",
+        "long": "90.370326672367",
+        "updated_at": "2023-10-06T10:41:31.000000Z",
+        "created_at": "2023-10-06T10:41:31.000000Z",
+        "id": 4
+    }
+}
+```
+
+- to store rider info ``` http://your-host/api/nearby-riders/{resturantId} ```
+
+Sample Response 
+```
+{
+    "message": "Nearest rider is",
+    "data": {
+        "rider_id": 1,
+        "distance": 0
+    },
+    "statusCode": 201
+}
+```
