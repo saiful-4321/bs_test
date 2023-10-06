@@ -47,3 +47,6 @@ Sample Response
     "statusCode": 201
 }
 ```
+
+# Run Test Cases
+- ``` php artisan test ```
