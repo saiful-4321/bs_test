@@ -16,6 +16,7 @@ use App\Http\Controllers\RiderInfoController;
 
 
 Route::post('store-rider-info', [RiderInfoController::class, 'store']);
+Route::get('nearby-riders/{resturentId}', [RiderInfoController::class, 'getRider']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
