@@ -11,3 +11,11 @@
 # API - Endpints.
 
 - to store rider info ``` http://your-host/api/store-rider-info ```
+Sample body data(raw/json) 
+```
+{
+    "rider_id": 1,
+    "lat": "23.812005737520796",
+    "long": "90.370326672366"
+}
+```
